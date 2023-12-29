@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark mode toggle button</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            place-content: center;
+            height: 100vh;
+        }
+
+        .outside-box{
+            width: 130px;
+            height: 50px;
+            background-color: rgb(156, 156, 156);
+            border-radius: 10rem;
+            padding: 0.35rem;
+            box-shadow: inset 5px 10px 20px 10px rgba(0, 0, 0, 0.267);
+            display: flex;
+            place-self: center;
+        }
+
+        .outside-box::after{
+            width: 35%;
+            content: "";
+            display: block;
+            height: 100%;
+            background-color: white;
+            border-radius: 100%;
+            transition: all 0.5s;
+            
+        }
+
+        .bg{
+            background-color: black;
+            color: white;
+        }
+
+        .move.outside-box::after{
+            transform: translateX(185%);
+        }
+
+        .bd{
+            background-color: black;
+            color: white;
+        }
+        
+
+    </style>
+</head>
+<body class="body">
+    <div class="container"> 
+        <h1>Hi turn on to the dark mode</h1>    
+        <div class="outside-box">
+            
+        </div>
+    </div>
+
+
+
+
+    <script src="../SCRIPT/togglebtn.js"></script>
+</body>
+</html>
